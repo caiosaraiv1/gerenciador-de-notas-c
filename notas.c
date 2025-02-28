@@ -74,26 +74,19 @@ void buscar_nota(Nota *notas, int qtd)
       scanf("%d", &id);
       getchar();
 
-      if(id < 0)
+      if(id < 0 || id >= qtd)
       {
             printf("Erro: ID invalido!\n");
             return;
       }
 
-      for(int i = 0; i < qtd; i++)
-      {
-            if(notas[i].id == id)
-            {
-                  printf("\nNota encontrada!\n");
-                  printf("-------------------\n");
-                  printf("ID: %d\n", notas[i].id);
-                  printf("Titulo: %s\n", notas[i].titulo);
-                  printf("Conteudo: %s\n", notas[i].conteudo);
-                  printf("-------------------\n");
-                  return;
-            }
-      }
-     printf("Nota nao encontrada!\n");
+      printf("\nNota encontrada!\n");
+      printf("-------------------\n");
+      printf("ID: %d\n", notas[id].id);
+      printf("Titulo: %s\n", notas[id].titulo);
+      printf("Conteudo: %s\n", notas[id].conteudo);
+      printf("-------------------\n");
+
 }
 
 void listar_notas(Nota *notas, int qtd)
