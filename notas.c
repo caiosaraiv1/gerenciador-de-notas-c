@@ -106,7 +106,6 @@ void listar_notas(Nota *notas, int qtd)
             printf("Conteudo: %s\n", notas[i].conteudo);
             printf("-------------------\n");
       }
-      return;
 }
 
 void excluir_nota(Nota **notas, int *qtd)
